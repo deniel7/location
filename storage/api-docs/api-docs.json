@@ -1,0 +1,494 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Location Service API",
+        "description": "This is Location Service API documentation.",
+        "version": "1.0.0"
+    },
+    "basePath": "/api",
+    "paths": {
+        "/cities": {
+            "get": {
+                "tags": [
+                    "city"
+                ],
+                "summary": "list of cities",
+                "description": "Returns a list of cities",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "id of city to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of city to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "province_id",
+                        "in": "query",
+                        "description": "province_id of city to return",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/City"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid city ID"
+                    },
+                    "404": {
+                        "description": "City not found"
+                    }
+                }
+            }
+        },
+        "/districts": {
+            "get": {
+                "tags": [
+                    "district"
+                ],
+                "summary": "list of districts",
+                "description": "Returns a list of districts",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "id of district to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of district to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "city_id",
+                        "in": "query",
+                        "description": "city_id of district to return",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/District"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid district ID"
+                    },
+                    "404": {
+                        "description": "District not found"
+                    }
+                }
+            }
+        },
+        "/provinces": {
+            "get": {
+                "tags": [
+                    "province"
+                ],
+                "summary": "list of provinces",
+                "description": "Returns a list of provinces",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "ID of province to return",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of province to return",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/Province"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid province ID"
+                    },
+                    "500": {
+                        "description": "Province not found"
+                    }
+                }
+            }
+        },
+        "/stores": {
+            "get": {
+                "tags": [
+                    "store"
+                ],
+                "summary": "list of stores",
+                "description": "Returns a list of stores",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "id of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "store_code",
+                        "in": "query",
+                        "description": "store_code of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "initial",
+                        "in": "query",
+                        "description": "initial of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "address of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "description": "city of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "query",
+                        "description": "phone of store to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "region of store to return",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/Store"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid store ID"
+                    },
+                    "404": {
+                        "description": "Store not found"
+                    }
+                }
+            }
+        },
+        "/zipcodes": {
+            "get": {
+                "tags": [
+                    "zipcode"
+                ],
+                "summary": "list of zipcodes",
+                "description": "Returns a list of zipcodes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "id of zipcode to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "name of zipcode to return",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "district_id",
+                        "in": "query",
+                        "description": "district_id of city to return",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "schema": {
+                            "$ref": "#/definitions/Zipcode"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid zipcode ID"
+                    },
+                    "404": {
+                        "description": "Zipcode not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "City": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "BADUNG, KAB."
+                },
+                "province_id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "xml": {
+                "name": "City"
+            }
+        },
+        "District": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "ABIANSEMAL"
+                },
+                "city_id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "xml": {
+                "name": "District"
+            }
+        },
+        "Province": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "BALI"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "xml": {
+                "name": "Province"
+            }
+        },
+        "Store": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "1"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "YOGYA SUNDA 60"
+                },
+                "store_code": {
+                    "type": "string",
+                    "example": "102"
+                },
+                "initial": {
+                    "type": "string",
+                    "example": "S60"
+                },
+                "address": {
+                    "type": "string",
+                    "example": "JL. SUNDA NO. 56 - 62"
+                },
+                "city": {
+                    "type": "string",
+                    "example": "BANDUNG"
+                },
+                "phone": {
+                    "type": "string",
+                    "example": "022-4200510-12"
+                },
+                "region": {
+                    "type": "string",
+                    "example": "2"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "xml": {
+                "name": "Store"
+            }
+        },
+        "Zipcode": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "BOGOR, 45257"
+                },
+                "district_id": {
+                    "type": "string",
+                    "example": "1000"
+                },
+                "created_at": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "xml": {
+                "name": "Zipcode"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "city",
+            "description": "Check City",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "district",
+            "description": "Check District",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "province",
+            "description": "Check Province",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "store",
+            "description": "Check Store",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        },
+        {
+            "name": "zipcode",
+            "description": "Check Zipcode",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http://swagger.io"
+            }
+        }
+    ]
+}

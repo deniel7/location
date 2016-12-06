@@ -1,0 +1,35 @@
+CARD-REG,Registered,Status Kartu
+CARD-ADD,Added,Status Kartu
+CARD-BLOCK,BlackListed,Status Kartu
+ROLE-INT,Internal,Role User
+ROLE-EXT,External,Role User
+PROF-ADMIN,Administrator,Profile User
+PROF-CSO,CSO,Profile User
+NRIC-KTP,KTP,Tanda Pengenal
+NRIC-SIM,SIM,Tanda Pengenal
+NRIC-PASS,Passport,Tanda Pengenal
+NRIC-PELAJAR,Kartu Pelajar,Tanda Pengenal
+TRAN-SLS,Sales,Jenis Transaksi
+TRAN-POININ,Poin IN,Jenis Transaksi
+TRAN-POINOUT,Poin OUT,Jenis Transaksi
+TRAN-UNDIN,Undian IN,Jenis Transaksi
+TRAN-UNDOUT,Undian OUT,Jenis Transaksi
+TRAN-RDM,Redeem,Jenis Transaksi
+PROF-MEMBER,Member,Profile User
+BOOK-CANCEL,Cancel,Status Booking
+BOOK-PROC,Processed,Status Booking
+BOOK-PARTPROC,Partial Processed,Status Booking
+BOOK-ONPROC,On Process,Status Booking
+PROF-SUPERVISOR,CSO Supervisor,Profile User
+TRAN-BONUS,Bonus Poin/Undian,Jenis Transaksi - Bo
+BREG-ENDPERIODE,2016-05-22,Bonus Registrasi - T
+BREG-JUMLAH,5,Bonus Registrasi - J
+TRAN-VOIDR,Void Redeem,Jenis Transaksi
+TRAN-RECINV,Receiving Inventory,Jenis Transaksi
+PROF-SUPERUSER,SUPERUSER,Profile User
+TRAN-OTP,One Time Pin,Jenis Transaksi
+,,Profile User
+TRAN-REG,Registrasi,Jenis Transaksi
+TRAN-ADJ,Adjustment Poin/Undian,Jenis Transaksi
+TRAN-MAGICIN,Tujuan Tarik Undian,Jenis Transaksi
+TRAN-MAGICOUT,User yang diambil undiann,Jenis Transaksi
